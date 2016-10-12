@@ -1,0 +1,12 @@
+platform :ios, "8.0"
+
+pod "AFNetworking"
+pod "SDWebImage"
+pod "SVProgressHUD"
+pod "MJExtension"
+pod "MJRefresh"
+pod "DACircularProgress"
+pod "pop"
+pod "NJKWebViewProgress"
+pod "FreeStreamer"
+pod 'UMengSocial', '~> 5.0'

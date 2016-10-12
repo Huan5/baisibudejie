@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  趣味信息分享
+//
+//  Created by Huanying on 16/4/19.
+//  Copyright © 2016年 huanying. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIView+HYExtension.h"
+#import "UIBarButtonItem+HYExtension.h"
+#import "HYConst.h"
+#import "NSDate+HYExtension.h"
+#import "UIImage+HYExtension.h"
+#import "UIImageView+HYExtension.h"
+
+#ifdef DEBUG
+#define HYLog(...)NSLog(__VA_ARGS__)
+#else
+#define HYLog(...)
+#endif
+
+
+#define HYRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:1.0 ]
+#define HYGlobalBg HYRGBColor(223,223,223)
+#define HYLogFunc HYLog(@"%s",__func__)
+
+#define HYScreenW [UIScreen mainScreen].bounds.size.width
+#define HYScreenH [UIScreen mainScreen].bounds.size.height
+
+#endif

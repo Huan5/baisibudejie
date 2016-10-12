@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYShowPictureViewController">
+            <connections>
+                <outlet property="progressView" destination="w6I-Xs-HUo" id="lXt-fn-T2N"/>
+                <outlet property="scrollView" destination="3ek-ZS-MoE" id="Mcs-rB-Izl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ek-ZS-MoE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AA-ug-kxt" userLabel="返回">
+                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="L1G-yQ-txm"/>
+                        <constraint firstAttribute="width" constant="35" id="d8l-Lb-Hjt"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="3Ra-Hy-oC6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfM-Ac-9FU" userLabel="保存">
+                    <rect key="frame" x="510" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="IGX-HS-a37"/>
+                        <constraint firstAttribute="width" constant="70" id="rre-wq-5LN"/>
+                    </constraints>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="save" destination="-1" eventType="touchUpInside" id="K6e-4b-137"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSL-ZX-TeZ" userLabel="转发">
+                    <rect key="frame" x="425" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="CuG-RU-JbC"/>
+                        <constraint firstAttribute="width" constant="70" id="bGL-Vw-7V6"/>
+                    </constraints>
+                    <state key="normal" title="转发"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6I-Xs-HUo" userLabel="进度条" customClass="HYProgressView">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Lyo-wo-kwm"/>
+                        <constraint firstAttribute="width" constant="100" id="ein-nv-IQT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="w6I-Xs-HUo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7Ik-gH-Ktd"/>
+                <constraint firstItem="YfM-Ac-9FU" firstAttribute="leading" secondItem="HSL-ZX-TeZ" secondAttribute="trailing" constant="15" id="9CM-JI-z6r"/>
+                <constraint firstAttribute="bottom" secondItem="3ek-ZS-MoE" secondAttribute="bottom" id="CM4-pD-zKW"/>
+                <constraint firstItem="4AA-ug-kxt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="EFR-fK-bf4"/>
+                <constraint firstItem="4AA-ug-kxt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="IJB-tt-CrJ"/>
+                <constraint firstAttribute="trailing" secondItem="YfM-Ac-9FU" secondAttribute="trailing" constant="20" id="KwF-1a-b6F"/>
+                <constraint firstItem="3ek-ZS-MoE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qsl-ew-Atp"/>
+                <constraint firstItem="HSL-ZX-TeZ" firstAttribute="top" secondItem="YfM-Ac-9FU" secondAttribute="top" id="cLI-KT-gnf"/>
+                <constraint firstAttribute="bottom" secondItem="YfM-Ac-9FU" secondAttribute="bottom" constant="20" id="mlN-lZ-iDB"/>
+                <constraint firstItem="w6I-Xs-HUo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nLN-OZ-eNL"/>
+                <constraint firstAttribute="trailing" secondItem="3ek-ZS-MoE" secondAttribute="trailing" id="wyE-3k-e54"/>
+                <constraint firstItem="3ek-ZS-MoE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="x8t-gc-EUp"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>
