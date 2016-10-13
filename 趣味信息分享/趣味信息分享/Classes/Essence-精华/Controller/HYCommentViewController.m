@@ -335,7 +335,7 @@ static NSString * const HYCommetnId = @"comment";
     UIMenuItem *replay = [[UIMenuItem alloc]initWithTitle:@"回复" action:@selector(replay:)];
     UIMenuItem *report = [[UIMenuItem alloc]initWithTitle:@"举报" action:@selector(report:)];
     menu.menuItems = @[ding,replay,report];
-    CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+    CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width *0.5, 0);
     [menu setTargetRect:rect inView:cell];
     [menu setMenuVisible:YES animated:YES];
 }
