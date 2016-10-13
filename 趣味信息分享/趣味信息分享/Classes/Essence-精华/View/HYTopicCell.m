@@ -191,16 +191,17 @@
     }
     [button setTitle:title forState:UIControlStateNormal];
 }
--(void)layoutSubviews{
-    [super layoutSubviews];
-    
-}
+
 -(void)setFrame:(CGRect)frame{
+    
+    if (!(frame.size.width == (HYScreenW - 2 * HYTopicCellMargin))) {
+        frame.origin.y += HYTopicCellMargin;
+    }
     frame.origin.x = HYTopicCellMargin;
     frame.size.width = HYScreenW - 2 * HYTopicCellMargin;
-    //frame.size.height -= HYTopicCellMargin;
     frame.size.height = self.topic.cellHeight - HYTopicCellMargin;
-    frame.origin.y += HYTopicCellMargin;
+    
+    
     [super setFrame:frame];
     
 }

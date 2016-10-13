@@ -57,7 +57,7 @@ static NSString * const cellID = @"topic";
     HYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
     cell.topic = self.collects[indexPath.row];
-    HYLog(@"%@",cell.topic);
+    
     return cell;
 }
 #pragma mark - Tableview delegate
@@ -76,12 +76,15 @@ static NSString * const cellID = @"topic";
     
 }
 //左滑的时候显示删除
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return UITableViewCellEditingStyleDelete;
 }
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return @"删除";
+    return @"不要了";
 }
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
