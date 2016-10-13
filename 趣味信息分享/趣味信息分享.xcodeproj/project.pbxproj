@@ -20,7 +20,6 @@
 		E108CE791CC62CEB00A22E20 /* UIBarButtonItem+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E108CE681CC62CEB00A22E20 /* UIBarButtonItem+HYExtension.m */; };
 		E108CE7A1CC62CEB00A22E20 /* UIView+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E108CE6A1CC62CEB00A22E20 /* UIView+HYExtension.m */; };
 		E108CE7B1CC62CEB00A22E20 /* HYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E108CE6D1CC62CEB00A22E20 /* HYTabBarController.m */; };
-		E108CE7C1CC62CEB00A22E20 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E108CE6E1CC62CEB00A22E20 /* Info.plist */; };
 		E108CE7D1CC62CEB00A22E20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E108CE6F1CC62CEB00A22E20 /* main.m */; };
 		E108CE7E1CC62CEB00A22E20 /* HYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E108CE731CC62CEB00A22E20 /* HYTabBar.m */; };
 		E10EBF7F1CC5BA9D0007D82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10EBF7E1CC5BA9D0007D82E /* Assets.xcassets */; };
@@ -32,8 +31,6 @@
 		E1204F8D1CDA11C5002ABABC /* HYSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1204F8C1CDA11C5002ABABC /* HYSquareButton.m */; };
 		E1204F911CDA1E0E002ABABC /* HYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1204F8F1CDA1E0E002ABABC /* HYWebViewController.m */; };
 		E1204F921CDA1E0E002ABABC /* HYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1204F901CDA1E0E002ABABC /* HYWebViewController.xib */; };
-		E157CB191CE5AC3100515825 /* KRVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E157CB131CE5AC3100515825 /* KRVideoPlayerController.m */; };
-		E157CB1A1CE5AC3100515825 /* KRVideoPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E157CB151CE5AC3100515825 /* KRVideoPlayerControlView.m */; };
 		E157CB1B1CE5AC3100515825 /* HYVociePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E157CB171CE5AC3100515825 /* HYVociePlayerController.m */; };
 		E157CB1C1CE5AC3100515825 /* HYVociePlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E157CB181CE5AC3100515825 /* HYVociePlayerController.xib */; };
 		E157CB1F1CE5B0E300515825 /* NSString+XFTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E157CB1E1CE5B0E300515825 /* NSString+XFTime.m */; };
@@ -129,10 +126,6 @@
 		E1204F8E1CDA1E0E002ABABC /* HYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWebViewController.h; sourceTree = "<group>"; };
 		E1204F8F1CDA1E0E002ABABC /* HYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWebViewController.m; sourceTree = "<group>"; };
 		E1204F901CDA1E0E002ABABC /* HYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWebViewController.xib; sourceTree = "<group>"; };
-		E157CB121CE5AC3100515825 /* KRVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRVideoPlayerController.h; sourceTree = "<group>"; };
-		E157CB131CE5AC3100515825 /* KRVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerController.m; sourceTree = "<group>"; };
-		E157CB141CE5AC3100515825 /* KRVideoPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRVideoPlayerControlView.h; sourceTree = "<group>"; };
-		E157CB151CE5AC3100515825 /* KRVideoPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRVideoPlayerControlView.m; sourceTree = "<group>"; };
 		E157CB161CE5AC3100515825 /* HYVociePlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYVociePlayerController.h; sourceTree = "<group>"; };
 		E157CB171CE5AC3100515825 /* HYVociePlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYVociePlayerController.m; sourceTree = "<group>"; };
 		E157CB181CE5AC3100515825 /* HYVociePlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYVociePlayerController.xib; sourceTree = "<group>"; };
@@ -562,10 +555,6 @@
 		E157CB111CE5AC3100515825 /* VideoPlayerController */ = {
 			isa = PBXGroup;
 			children = (
-				E157CB121CE5AC3100515825 /* KRVideoPlayerController.h */,
-				E157CB131CE5AC3100515825 /* KRVideoPlayerController.m */,
-				E157CB141CE5AC3100515825 /* KRVideoPlayerControlView.h */,
-				E157CB151CE5AC3100515825 /* KRVideoPlayerControlView.m */,
 				E157CB161CE5AC3100515825 /* HYVociePlayerController.h */,
 				E157CB171CE5AC3100515825 /* HYVociePlayerController.m */,
 				E157CB181CE5AC3100515825 /* HYVociePlayerController.xib */,
@@ -630,7 +619,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HY;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = huanying;
 				TargetAttributes = {
 					E10EBF6E1CC5BA9D0007D82E = {
@@ -671,7 +660,6 @@
 				E1F362FC1CD3344000532929 /* HYTopicVoiceView.xib in Resources */,
 				E18CE6C61CD7794400E1506D /* HYCommentCell.xib in Resources */,
 				E15D22A51CD05CA4006219CB /* HYTopicPictureView.xib in Resources */,
-				E108CE7C1CC62CEB00A22E20 /* Info.plist in Resources */,
 				E1E71B881CCF0CB000B0DF39 /* HYTopicCell.xib in Resources */,
 				E10EBF7F1CC5BA9D0007D82E /* Assets.xcassets in Resources */,
 				E16EB6621CD0BBBC0067565E /* HYShowPictureViewController.xib in Resources */,
@@ -764,7 +752,6 @@
 				E1CB84241CCEF135000B655F /* HYTopic.m in Sources */,
 				E108CE771CC62CEB00A22E20 /* HYNewViewController.m in Sources */,
 				E1FB94EB1CC9F90D00F4E237 /* HYLoginRegisterViewController.m in Sources */,
-				E157CB191CE5AC3100515825 /* KRVideoPlayerController.m in Sources */,
 				E108CE741CC62CEB00A22E20 /* HYEssenceViewController.m in Sources */,
 				E108CE781CC62CEB00A22E20 /* AppDelegate.m in Sources */,
 				E1F362FA1CD333D700532929 /* HYTopicVoiceView.m in Sources */,
@@ -775,7 +762,6 @@
 				E157CB1B1CE5AC3100515825 /* HYVociePlayerController.m in Sources */,
 				E108CE761CC62CEB00A22E20 /* HYMeViewController.m in Sources */,
 				E18A2DC71CC85F1C006D06BB /* HYRecommendUserCell.m in Sources */,
-				E157CB1A1CE5AC3100515825 /* KRVideoPlayerControlView.m in Sources */,
 				E1BDC6051CC766E3007EDE61 /* Foundation+Log.m in Sources */,
 				E157CB1F1CE5B0E300515825 /* NSString+XFTime.m in Sources */,
 				E1FD23E51CE9A5CF0029FCE7 /* HYCollectTableViewController.m in Sources */,

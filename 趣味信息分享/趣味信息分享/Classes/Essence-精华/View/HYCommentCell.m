@@ -10,7 +10,7 @@
 #import "HYComment.h"
 #import "HYUser.h"
 #import <UIImageView+WebCache.h>
-#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
 
 @interface HYCommentCell()
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UIButton *voiceButton;
 /**播放控制器*/
-@property(nonatomic,strong)MPMoviePlayerController *player;
+@property(nonatomic,strong)AVPlayer *player;
 
 
 @end
@@ -73,7 +73,7 @@
     if (self.player != nil) {
         self.player = nil;
     }
-    self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:self.comment.voiceuri]];
+    self.player = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:self.comment.voiceuri]];
     [self.player play];
 }
 - (IBAction)likebtnClick {

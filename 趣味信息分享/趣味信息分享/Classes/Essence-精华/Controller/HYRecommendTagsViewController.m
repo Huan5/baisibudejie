@@ -36,6 +36,7 @@ static NSString * const HYTagsID = @"tag";
  *加载Tags
  */
 - (void)loadTags{
+    
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     
     //请求参数

@@ -39,7 +39,7 @@
 -(void)viewDidLoad {
     [self.progress setThumbImage:[UIImage imageNamed:@"kr-video-player-point"] forState:UIControlStateNormal];
     [self startPlayingMusic];
-    self.playTime.text = [NSString stringWithTime:self.totalTime];
+    //self.playTime.text = [NSString stringWithTime:self.totalTime];
     AVPlayer *player = [[AVPlayer alloc] init];
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
     
@@ -54,14 +54,16 @@
     [self.playerAV replaceCurrentItemWithPlayerItem:playerItem];
     if (self.playerEnable) {
         [self.playerAV play];
+        [self startPlayingMusic];
+        self.playBtn.selected = NO;
     }
 }
 //view已经隐藏
--(void)viewDidDisappear:(BOOL)animated{
-    if (self.playerEnable) {
-        [self pause];
-        self.playerEnable = NO;
-    }
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.playerAV pause];
+    self.playBtn.selected = YES;
+    [self removeProgressTimer];
+    self.playerEnable = NO;
 }
 //开始播放音乐
 - (void)startPlayingMusic {
@@ -86,7 +88,7 @@
     // 1.设置当前的播放时间
     
     self.restTime.text = [NSString stringWithTime:CMTimeGetSeconds(self.playerAV.currentTime)];
-    
+    self.playTime.text = [NSString stringWithTime:(CMTimeGetSeconds(self.playerAV.currentItem.duration) - CMTimeGetSeconds(self.playerAV.currentTime))];
     
     // 2.更新滑块的位置
     self.progress.value = CMTimeGetSeconds(self.playerAV.currentTime) / CMTimeGetSeconds(self.playerAV.currentItem.duration);
@@ -94,8 +96,17 @@
     if (CMTimeGetSeconds(self.playerAV.currentTime)==CMTimeGetSeconds(self.playerAV.currentItem.duration)) {
         HYLog(@"hh");
         [self pause];
+        
         [self.playerAV seekToTime:CMTimeMakeWithSeconds(0.0, NSEC_PER_SEC)];
     }
+//    if (![self.view isShowingOnKeyWindow]) {
+//        
+//        HYLog(@"我来了%@",[NSThread currentThread]);
+//        [self.playerAV pause];
+//        self.playBtn.selected = YES;
+//        [self removeProgressTimer];
+//        self.playerEnable = NO;
+//    }
 }
 
 #pragma mark - Slider的事件处理

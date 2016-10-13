@@ -9,6 +9,7 @@
 #import "HYEssenceViewController.h"
 #import "HYRecommendTagsViewController.h"
 #import "HYTopicViewController.h"
+#import <SVProgressHUD.h>
 
 @interface HYEssenceViewController () <UIScrollViewDelegate>
 /**标签栏底部红色指示器*/
@@ -161,6 +162,7 @@
  *  设置导航栏
  */
 -(void)setupNav{
+    [SVProgressHUD setMinimumDismissTimeInterval:HYShowMessageDismissTimeInterval];
     //设置导航栏的标题
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
     //设置导航栏的按钮

@@ -10,7 +10,7 @@
 
 @implementation NSString (XFTime)
 + (NSString *)stringWithTime:(NSTimeInterval)time {
-    if (!time) return @"00:00";
+    if (time <= 0.0) return @"00:00";
     NSInteger min = time / 60;
     NSInteger second = (NSInteger)time % 60;
     
