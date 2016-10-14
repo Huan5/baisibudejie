@@ -37,6 +37,7 @@
     
     //底部的scrollView
     [self setupContenView];
+    
 
 }
 /**

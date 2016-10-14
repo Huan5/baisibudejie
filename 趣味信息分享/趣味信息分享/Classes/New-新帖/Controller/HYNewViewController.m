@@ -14,7 +14,12 @@
 @end
 
 @implementation HYNewViewController
-
+-(instancetype)init{
+    if (self = [super init]) {
+        self.tabBarItem.badgeValue = @"+66";
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置导航栏的内容
