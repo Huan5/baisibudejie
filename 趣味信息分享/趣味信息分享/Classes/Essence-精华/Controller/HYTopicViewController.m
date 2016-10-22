@@ -15,7 +15,10 @@
 #import "HYTopicCell.h"
 #import "HYCommentViewController.h"
 #import "HYNewViewController.h"
-#import <UMSocial.h>
+
+#import "HYActivityViewController.h"
+
+#import <UMSocialCore/UMSocialCore.h>
 
 @interface HYTopicViewController ()<HYTopicCellDelegate>
 /**帖子数据*/
@@ -28,6 +31,7 @@
 @property(nonatomic,strong)NSDictionary *params;
 /**上次选中的索引*/
 @property(nonatomic,assign)NSInteger lastSelectedIndex;
+
 @end
 
 @implementation HYTopicViewController
@@ -207,6 +211,7 @@ static NSString * const HYTopicCellId = @"topic";
     if (cell == nil) {
         cell = [[HYTopicCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:HYTopicCellId];
     }
+    
     cell.delegate = self;
     cell.topic = self.topics[indexPath.row];
     
@@ -247,14 +252,35 @@ static NSString * const HYTopicCellId = @"topic";
  */
 -(void)shareClick:(HYTopicCell *)cell{
     HYTopic *topic = cell.topic;
-    NSString *text = [NSString stringWithFormat:@"%@ %@%@",topic.text,topic.voiceuri,topic.videouri];
-    //弹出分享界面
-    [[UMSocialData defaultData].extConfig.tencentData.urlResource setResourceType:UMSocialUrlResourceTypeImage url:topic.small_image];
-    [UMSocialSnsService presentSnsIconSheetView:self
-                                         appKey:HYUmAppKey
-                                      shareText:text
-                                     shareImage:nil
-                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToQzone,UMShareToWechatTimeline,nil]
-                                       delegate:nil];
+    
+    NSString *textToShare = @"要分享的文本内容";
+    
+    NSURL *imageToShare = [NSURL URLWithString:topic.large_image];
+    
+    NSURL *urlToShare = [NSURL URLWithString:@"http://www.baidu.com"];
+    
+    NSArray *activityItems = @[textToShare,imageToShare,urlToShare];
+    
+    
+    
+    HYActivityViewController *activityVC = [[HYActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+    
+    //回调函数
+    UIActivityViewControllerCompletionWithItemsHandler myBlock = ^(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+        
+        NSLog(@"activityType :%@", activityType);
+        
+        if (completed)  {
+            
+            NSLog(@"completed");
+        }
+        else  {
+            NSLog(@"cancel");
+        }
+    };
+        //completionHandler，当post结束之后（无论是done还是cancell）该blog都会被调用
+    activityVC.completionWithItemsHandler = myBlock;
+        
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:activityVC animated:YES completion:nil];
 }
 @end

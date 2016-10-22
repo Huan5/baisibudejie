@@ -83,9 +83,27 @@ static NSString * const cellID = @"topic";
     
     return UITableViewCellEditingStyleDelete;
 }
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return @"不要了";
-}
+//自定义每一个左滑显示的操作
+//- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED{
+//    
+//    UITableViewRowAction *action = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"增加" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//        // 点击增加的时候调用
+//        NSLog(@"增加");
+//        
+//    }];
+//    action.backgroundColor = [UIColor greenColor];
+//    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//        // 点击增加的时候调用
+//        NSLog(@"删除");
+//        
+//    }];
+//    
+//    
+//    return @[action,action1];
+//}
+//-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return @"不要了";
+//}
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.collects removeObjectAtIndex:indexPath.row];

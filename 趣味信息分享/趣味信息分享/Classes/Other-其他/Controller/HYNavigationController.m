@@ -7,6 +7,7 @@
 //
 
 #import "HYNavigationController.h"
+#import "HYCollectTableViewController.h"
 
 @interface HYNavigationController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, weak) UIPanGestureRecognizer *popRecognizer;
@@ -22,12 +23,18 @@
     //UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 /**
  *  可以在这个方法中拦截所有push进来的控制器
  */
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if ([viewController isKindOfClass:[HYCollectTableViewController class]]) {
+        self.popRecognizer.enabled = NO;
+    }else{
+        self.popRecognizer.enabled = YES;
+    }
     if (self.childViewControllers.count > 0) {//如果push进来的不是第一个控制器
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:@"返回" forState:UIControlStateNormal];
@@ -46,7 +53,7 @@
     }
     //这句super的push要放在后面，让viewController可以覆盖上面设置的leftBarButtonItem
     [super pushViewController:viewController animated:animated];
-
+    
 }
 - (void) back{
     [self popViewControllerAnimated:YES];
@@ -67,6 +74,7 @@
     popRecognizer.delegate = self;
     popRecognizer.maximumNumberOfTouches = 1;
     [gestureView addGestureRecognizer:popRecognizer];
+    self.popRecognizer = popRecognizer;
     /**
      *  获取系统手势的target数组
      */
@@ -87,6 +95,16 @@
      *  创建一个与系统一模一样的手势，我们只把它的类改为UIPanGestureRecognizer
      */
     [popRecognizer addTarget:navigationInteractiveTransition action:handleTransition];
+    
+    
+    //设置转场动画
+    CATransition *trans = [[CATransition alloc] init];
+    trans.type = @"rippleEffect";
+    trans.duration = 4.0f;
+    trans.delegate = self;
+    trans.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    trans.subtype = kCATransitionFromTop;
+    [self.view.layer addAnimation:trans forKey:nil];
     
 }
 

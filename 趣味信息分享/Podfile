@@ -1,5 +1,7 @@
 platform :ios, "8.0"
 
+target '趣味信息分享' do
+
 pod "AFNetworking"
 pod "SDWebImage"
 pod "SVProgressHUD"
@@ -9,4 +11,5 @@ pod "DACircularProgress"
 pod "pop"
 pod "NJKWebViewProgress"
 pod "FreeStreamer"
-pod 'UMengSocial', '~> 5.0'
+
+end
