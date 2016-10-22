@@ -44,7 +44,7 @@ static NSString * const HYTopicCellId = @"topic";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //初始化表格(同时处理通知)
     [self setupTableView];
     

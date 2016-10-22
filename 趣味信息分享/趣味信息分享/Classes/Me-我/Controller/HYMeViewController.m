@@ -23,7 +23,14 @@
 
 
 static NSString *HYMeID = @"me";
-
+-(instancetype)initWithStyle:(UITableViewStyle)style{
+    if (self = [super initWithStyle:style]) {
+        //监听collect
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collect:) name:@"collect" object:nil];
+        return  self;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -64,8 +71,7 @@ static NSString *HYMeID = @"me";
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" hightImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" hightImage:@"mine-moon-icon-click" target:self action:@selector(nightModeClick)];
     self.navigationItem.rightBarButtonItems = @[settingItem,moonItem];
-    //监听collect
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collect:) name:@"collect" object:nil];
+    
 }
 /**
  *  监听到通知就执行
