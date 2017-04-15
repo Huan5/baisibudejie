@@ -1,1 +1,1 @@
-https://github.com/changechenyu/ShakeToFresh/blob/master/app/src/main/res/drawable/shake.gif
+![](http://img5.imgtn.bdimg.com/it/u=1880243990,2577219667&fm=23&gp=0.jpg)
