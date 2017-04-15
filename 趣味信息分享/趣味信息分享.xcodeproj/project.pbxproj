@@ -34,6 +34,7 @@
 		D86845FD1DB0D48D00258221 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86845FC1DB0D48D00258221 /* CFNetwork.framework */; };
 		D86845FF1DB0D49900258221 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86845FE1DB0D49900258221 /* QuartzCore.framework */; };
 		D86846011DB0D4A700258221 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86846001DB0D4A700258221 /* CoreGraphics.framework */; };
+		D87700091EA1C75900ED6677 /* show.gif in Resources */ = {isa = PBXBuildFile; fileRef = D87700081EA1C75900ED6677 /* show.gif */; };
 		D88A70931DB1D81600FA981A /* HYActive.m in Sources */ = {isa = PBXBuildFile; fileRef = D88A70921DB1D81600FA981A /* HYActive.m */; };
 		D88A70961DB1DEAA00FA981A /* HYActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D88A70951DB1DEAA00FA981A /* HYActivityViewController.m */; };
 		E105C7D81CD9B42200AB151F /* UIImage+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E105C7D71CD9B42200AB151F /* UIImage+HYExtension.m */; };
@@ -159,6 +160,7 @@
 		D86845FC1DB0D48D00258221 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D86845FE1DB0D49900258221 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D86846001DB0D4A700258221 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D87700081EA1C75900ED6677 /* show.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = show.gif; path = "Classes/Other-其他/show.gif"; sourceTree = "<group>"; };
 		D88A70911DB1D81600FA981A /* HYActive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYActive.h; sourceTree = "<group>"; };
 		D88A70921DB1D81600FA981A /* HYActive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYActive.m; sourceTree = "<group>"; };
 		D88A70941DB1DEAA00FA981A /* HYActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYActivityViewController.h; sourceTree = "<group>"; };
@@ -768,6 +770,7 @@
 				D86845B81DB0B74300258221 /* UMSocial */,
 				E10EBF7E1CC5BA9D0007D82E /* Assets.xcassets */,
 				E108CE6E1CC62CEB00A22E20 /* Info.plist */,
+				D87700081EA1C75900ED6677 /* show.gif */,
 				E108CE6F1CC62CEB00A22E20 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -890,6 +893,7 @@
 				E18CE6C61CD7794400E1506D /* HYCommentCell.xib in Resources */,
 				E15D22A51CD05CA4006219CB /* HYTopicPictureView.xib in Resources */,
 				D86845EC1DB0B74300258221 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				D87700091EA1C75900ED6677 /* show.gif in Resources */,
 				E1E71B881CCF0CB000B0DF39 /* HYTopicCell.xib in Resources */,
 				D86845F21DB0B74300258221 /* read_me.txt in Resources */,
 				E10EBF7F1CC5BA9D0007D82E /* Assets.xcassets in Resources */,
