@@ -23,6 +23,7 @@
 
 
 static NSString *HYMeID = @"me";
+
 -(instancetype)initWithStyle:(UITableViewStyle)style{
     if (self = [super initWithStyle:style]) {
         //监听collect

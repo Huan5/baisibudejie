@@ -17,10 +17,11 @@
 @end
 
 
+
 @interface HYTopicCell : UITableViewCell
 /**帖子数据*/
 @property(nonatomic,strong)HYTopic *topic;
 /**代理属性*/
-@property(nonatomic,assign)id< HYTopicCellDelegate > delegate;
+@property(nonatomic,weak)id< HYTopicCellDelegate > delegate;
 +(instancetype)cell;
 @end

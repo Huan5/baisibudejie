@@ -16,7 +16,7 @@
     //获得上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
-    //添加一个圆
+    //添加一个椭圆
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     CGContextAddEllipseInRect(ctx, rect);
     

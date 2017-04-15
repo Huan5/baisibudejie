@@ -22,10 +22,21 @@
     //当导航栏用在HYNavigationController中，appearance设置才会生效
     //UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
     UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];    
 }
-
+/**
+ *  拦截所有dismiss进来的控制器
+ */
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
+    if ([self isKindOfClass:[HYCollectTableViewController class]]) {
+        self.popRecognizer.enabled = NO;
+    }else{
+        self.popRecognizer.enabled = YES;
+    }
+    
+    
+    [super dismissViewControllerAnimated:flag completion:completion];
+}
 /**
  *  可以在这个方法中拦截所有push进来的控制器
  */
@@ -58,6 +69,7 @@
 - (void) back{
     [self popViewControllerAnimated:YES];
 }
+
 /**
  *  设置导航控制器的全屏右滑手势
  */

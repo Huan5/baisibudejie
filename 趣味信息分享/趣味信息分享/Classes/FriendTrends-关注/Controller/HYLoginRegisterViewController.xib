@@ -291,7 +291,7 @@
                 <constraint firstItem="vW1-8d-2XS" firstAttribute="top" secondItem="bkQ-qa-evM" secondAttribute="bottom" constant="60" id="icE-AK-AP5"/>
                 <constraint firstItem="BtS-Lf-5th" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rnc-bk-gaW"/>
             </constraints>
-            <point key="canvasLocation" x="168" y="221"/>
+            <point key="canvasLocation" x="205" y="194"/>
         </view>
     </objects>
     <resources>

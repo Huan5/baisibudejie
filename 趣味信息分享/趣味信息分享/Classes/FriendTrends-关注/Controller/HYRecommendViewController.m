@@ -206,7 +206,6 @@ static NSString *HYUserID = @"user";
  */
 - (void)checkFooterState{
     HYRecommendCategory *rc = HYSelectedCategory;
-    
     //每次刷新右边数据时，都控制footer的显示也隐藏
     self.userTableView.mj_footer.hidden = (rc.users.count == 0);
     //让底部控件结束刷新

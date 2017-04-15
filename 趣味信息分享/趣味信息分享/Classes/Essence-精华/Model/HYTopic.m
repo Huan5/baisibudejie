@@ -15,6 +15,40 @@
 {
     CGFloat _cellHeight;
 }
+// 什么时候调用：自定义对象归档的时候
+
+// 作用：用来描述当前对象里面的哪些属性需要归档
+//- (void)encodeWithCoder:(NSCoder *)aCoder
+//{
+//    // name
+//    [aCoder encodeObject:_name forKey:@"name"];
+//    
+//    // age
+//    [aCoder encodeInt:_age forKey:@"age"];
+//    
+//}
+
+
+// 什么时候调用:解档对象的时候调用
+
+// 作用：用来描述当前对象里面的哪些属性需要解档
+// initWithCoder：就是用来解析文件的。
+//- (id)initWithCoder:(NSCoder *)aDecoder
+//{
+//    // super:NSObject
+//#warning 什么时候需要调用initWithCoder
+//    if (self = [super init]) {
+//        
+//        // 注意：一定要给成员变量赋值
+//        // name
+//        _name = [aDecoder decodeObjectForKey:@"name"];
+//        
+//        // age
+//        _age = [aDecoder decodeIntForKey:@"age"];
+//        
+//    }
+//    return self;
+//}
 /**
  *  告诉在转模型的时候（类型名对应了哪个key）
  */

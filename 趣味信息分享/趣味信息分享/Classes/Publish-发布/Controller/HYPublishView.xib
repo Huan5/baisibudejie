@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYPublishViewController"/>
@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WA-h3-pfZ" userLabel="取消">
-                    <rect key="frame" x="156" y="520" width="289" height="40"/>
+                    <rect key="frame" x="156" y="491" width="289" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="289" id="lRF-qu-Hrh"/>
                         <constraint firstAttribute="height" constant="40" id="rrB-6w-tps"/>
@@ -25,9 +25,18 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="7WA-h3-pfZ" secondAttribute="bottom" constant="40" id="DcT-i3-zFB"/>
+                <constraint firstAttribute="bottom" secondItem="7WA-h3-pfZ" secondAttribute="bottom" constant="69" id="DcT-i3-zFB"/>
                 <constraint firstItem="7WA-h3-pfZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SPj-gz-486"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="layerColor">
+                    <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="f">
+                    <real key="value" value="1.5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="230" y="229"/>
         </view>
     </objects>
     <resources>

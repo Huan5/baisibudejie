@@ -52,6 +52,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
 
+
 @end
 @implementation HYTopicCell
 
@@ -60,6 +61,7 @@
  */
 -(void)prepareForReuse{
     [super prepareForReuse];
+    //HYLog(@"用我了吧!");
     [_voiceView reset];
     [_videoView reset];
     //恢复顶、分享、踩
@@ -67,6 +69,10 @@
     self.caiButton.selected = NO;
     self.shareButton.selected = NO;
     
+//    self.transform = CGAffineTransformMakeTranslation(0,100);
+//    [UIView animateWithDuration:1.0 animations:^{
+//        self.transform = CGAffineTransformMakeTranslation(0, 0);
+//    }];
 }
 
 +(instancetype)cell{
@@ -103,10 +109,15 @@
     UIImageView *bgView = [[UIImageView alloc]init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
-    
+    //HYLog(@"就是我!");
+//    self.transform = CGAffineTransformMakeTranslation(0,20);
+//    [UIView animateWithDuration:1.0 animations:^{
+//        self.transform = CGAffineTransformMakeTranslation(0, 0);
+//    }];
 //    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
 //    self.profileImageView.layer.masksToBounds = YES;
 }
+
 -(void)setTopic:(HYTopic *)topic{
     _topic = topic;
     
@@ -200,7 +211,7 @@
     frame.origin.x = HYTopicCellMargin;
     frame.size.width = HYScreenW - 2 * HYTopicCellMargin;
     frame.size.height = self.topic.cellHeight - HYTopicCellMargin;
-    
+
     
     [super setFrame:frame];
     

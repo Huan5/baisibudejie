@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HYPublishView : UIView
+
+/* 这个IBInspectable可以用来将这个属性放到视图上面设置，可以动态的改变自定义的View，得重写set方法*/
+@property (nonatomic,strong)IBInspectable UIColor *layerColor;
+/* layer圆角*/
+@property (nonatomic,assign)IBInspectable CGFloat f;
 + (instancetype)publishView;
 /**
  *  显示

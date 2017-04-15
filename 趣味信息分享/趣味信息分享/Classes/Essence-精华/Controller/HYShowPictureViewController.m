@@ -12,6 +12,7 @@
 #import <SVProgressHUD.h>
 #import "HYProgressView.h"
 
+
 @interface HYShowPictureViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet HYProgressView *progressView;
@@ -57,6 +58,9 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];
+}
+-(void)awakeFromNib{
+    HYLog(@"来到了awakeNib函数");
 }
 -(IBAction)back{
     [self dismissViewControllerAnimated:YES completion:nil];

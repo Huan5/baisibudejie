@@ -19,6 +19,14 @@ static CGFloat const HYSPringFactor = 10;
 @end
 
 @implementation HYPublishView
+
+-(void)setLayerColor:(UIColor *)layerColor{
+    self.layer.borderColor = layerColor.CGColor;
+}
+-(void)setF:(CGFloat)f{
+    self.layer.masksToBounds = f > 0.0;
+    self.layer.borderWidth = f;
+}
 //-(void)bloc:(void(^)())blok{
 //
 //}

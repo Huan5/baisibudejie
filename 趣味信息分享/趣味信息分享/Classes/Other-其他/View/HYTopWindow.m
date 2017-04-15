@@ -49,6 +49,7 @@ static UIWindow *window_;
             [subView setContentOffset:offset animated:YES];
         }
         //继续查找子控件
+        
         [self searchScrollViewInView:subView];
     }
 }

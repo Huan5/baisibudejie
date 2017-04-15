@@ -15,6 +15,14 @@
 #import "UIImage+HYExtension.h"
 #import "UIImageView+HYExtension.h"
 
+#ifdef __OBJC__
+#ifdef DEBUG
+#define  NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__,__LINE__, ##__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+#endif
+
 #ifdef DEBUG
 #define HYLog(...)NSLog(__VA_ARGS__)
 #else

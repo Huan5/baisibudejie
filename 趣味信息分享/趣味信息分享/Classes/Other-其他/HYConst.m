@@ -8,7 +8,7 @@ CGFloat const HYTitlesViewH = 35;
 /**精华-所有顶部标题的Y值*/
 CGFloat const HYTitlesViewY = 64;
 /**精华-cell-间距*/
-CGFloat const HYTopicCellMargin = 10 ;
+CGFloat const HYTopicCellMargin = 2;
 /**精华-cell-底部工具条的高度*/
 CGFloat const HYTopicCellButtonBarH = 35 ;
 /**精华-cell-文字内容的Y值*/

@@ -10,7 +10,7 @@
 @class HYComment;
 
 
-@interface HYTopic : NSObject
+@interface HYTopic : NSObject<NSCoding>
 
 /**帖子的id*/
 @property(nonatomic,copy)NSString *ID;

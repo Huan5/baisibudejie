@@ -846,6 +846,11 @@
 					E10EBF6E1CC5BA9D0007D82E = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 3TM26MJ9Q7;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

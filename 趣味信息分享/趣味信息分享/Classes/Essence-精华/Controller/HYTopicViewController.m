@@ -55,11 +55,50 @@ static NSString * const HYTopicCellId = @"topic";
     
     
 }
+
 /**
  * a参数
  */
 -(NSString *)a{
     return [self.parentViewController isKindOfClass:[HYNewViewController class]] ? @"newlist" : @"list";
+}
+/**
+ *  上传数据
+ */
+- (void)uploadData{
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSMutableURLRequest *request = [NSMutableURLRequest     requestWithURL:[NSURL URLWithString:@"接口地址"]];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPMethod:@"POST"];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval:20];
+    NSDictionary * dataDic = @{@"key":@"value"};//把要上传的数据存到字典中
+    NSData * data = [NSJSONSerialization dataWithJSONObject:dataDic
+                                                    options:NSJSONWritingPrettyPrinted
+                                                      error:nil];
+    NSURLSessionUploadTask * uploadTask = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error) {
+            //NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        }else{
+            NSLog(@"上传失败");
+        }
+    }];
+    [uploadTask resume];
+}
+- (void)uploadImage{
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"接口"]];
+    [request addValue:@"image/jpeg" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"text/html" forHTTPHeaderField:@"Accept"];
+    [request setHTTPMethod:@"POST"];
+    [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    [request setTimeoutInterval:20];
+    NSData * imageData = UIImageJPEGRepresentation([UIImage imageNamed:@""],1.0);
+    NSURLSessionUploadTask * uploadTask = [session uploadTaskWithRequest:request fromData:imageData completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+    }];
+    [uploadTask resume];
 }
 /**
  *  初始化表格

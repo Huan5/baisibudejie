@@ -22,6 +22,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBarItem.badgeValue = nil;
     //设置导航栏的内容
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" hightImage:@"MainTagSubIconClick" target:self action:@selector(newClick)];
