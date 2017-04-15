@@ -1,2 +1,1 @@
-# -
-高仿百思不得姐 用的它的API还有一些不足的地方。
+https://github.com/changechenyu/ShakeToFresh/blob/master/app/src/main/res/drawable/shake.gif
